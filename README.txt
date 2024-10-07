@@ -17,5 +17,8 @@ Power by: https://bambuco.co
 
 IN VERSION
 =============
+2024100700:
+Moodle 4.x compatibility
+
 2023050700:
 Started as a public project into Github.

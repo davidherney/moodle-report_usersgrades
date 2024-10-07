@@ -51,13 +51,13 @@ if ($format) {
 $context = context_system::instance();
 $site = get_site();
 
-$extracolumns = get_extra_user_fields($context);
+$extracolumns = \core_user\fields::get_identity_fields($context);
 // Get all user name fields as an array.
-$allusernamefields = get_all_user_name_fields(false, null, null, null, true);
+$allusernamefields = \core_user\fields::get_name_fields();
 $columns = array_merge($allusernamefields, $extracolumns);
 
 foreach ($columns as $column) {
-    $string[$column] = get_user_field_name($column);
+    $string[$column] = \core_user\fields::get_display_name($column);
     if ($sort != $column) {
         $columnicon = "";
         $columndir = "ASC";
